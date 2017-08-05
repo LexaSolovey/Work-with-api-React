@@ -1,0 +1,47 @@
+.App{
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.itemOfMovies{
+  margin-top: 10px;
+}
+.itemOfMovies li{
+  list-style-type: none;
+  background-color: #d9edf7;
+  border-radius: 3px;
+}
+
+.img-thumbnail{
+  margin: 10px;
+}
+
+.content ul{
+  margin: 0;
+  padding: 0;
+}
+
+.notFoundContent{
+  background-color: #d9edf7;
+  text-align: center;
+  margin: 50px 0;
+  border-radius: 3px;
+}
+
+.movieInput{
+  margin-top: 20px;
+  text-align: center;
+}
+.movieInput input{
+  margin-left: 5px;
+}
+
+.listHeader{
+  height: 50px;
+  background-color: #d9edf7;
+  border-radius: 3px;
+}
+.listHeader h3{
+  padding: 10px 0 10px 25px;
+}
