@@ -33,7 +33,8 @@ export default class CarInputs extends Component {
             type="text"
             placeholder="Enter a name of movie..."
             value={this.state.movieName}
-            onChange={this.handleMovieNameChange} />
+            onChange={this.handleMovieNameChange}
+            required />
           <input type="submit" value="Submit" onClick={this.buttonClick}/>
         </form>
       </div>

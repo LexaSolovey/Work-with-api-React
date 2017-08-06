@@ -16,6 +16,9 @@ class MovieReturn extends Component {
          listOfMovies: movieData.results
        })
      });
+     let titleListOfMovies = document.querySelector('.titleListOfMovies h3');
+     const titleContent = 'List of movies';
+     titleListOfMovies.innerHTML = titleContent;
    }
 
    getListOfTopMovies(){
@@ -28,7 +31,14 @@ class MovieReturn extends Component {
     }
 
    componentWillReceiveProps(nextProps) {
-     this.getListOfMovies(nextProps.movieName);
+     if(nextProps.movieName!==""){
+       this.getListOfMovies(nextProps.movieName);
+     }else {
+       this.getListOfTopMovies();
+       let titleListOfMovies = document.querySelector('.titleListOfMovies h3');
+       const titleContent = 'Top movies';
+       titleListOfMovies.innerHTML = titleContent;
+     }
    }
 
    componentWillMount(){
@@ -59,8 +69,8 @@ class MovieReturn extends Component {
         <div className="content">
           <Row>
             <Col md={12} sm={12}>
-              <div className="listHeader">
-                <h3>List of movies</h3>
+              <div className="titleListOfMovies">
+                <h3>Top movies</h3>
             </div>
             </Col>
           </Row>

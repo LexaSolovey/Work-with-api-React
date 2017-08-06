@@ -21,6 +21,9 @@
   margin: 0;
   padding: 0;
 }
+.content{
+  margin-bottom: 50px;
+}
 
 .notFoundContent{
   background-color: #d9edf7;
@@ -37,11 +40,11 @@
   margin-left: 5px;
 }
 
-.listHeader{
+.titleListOfMovies{
   height: 50px;
   background-color: #d9edf7;
   border-radius: 3px;
 }
-.listHeader h3{
+.titleListOfMovies h3{
   padding: 10px 0 10px 25px;
 }

@@ -2,7 +2,7 @@
   "name": "rapi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://LexaSolovey.github.io/Work-with-API-in-React",
+  "homepage": "http://LexaSolovey.github.io/Work-with-api-React",
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "^3.3.7",
