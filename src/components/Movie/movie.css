@@ -1,0 +1,50 @@
+.movieInfo{
+  background-color: whitesmoke;
+}
+.movieInfo h3{
+  margin-left: 30px;
+}
+
+.descriptionItem{
+  color: #f60;
+  border-bottom: 1px dashed #000000;
+  padding-left: 10px
+}
+.description{
+  height: 20px;
+  margin: 15px;
+}
+.descriptionOFMovie{
+  display: inline;
+  padding: 25px;
+}
+.type{
+  color: #f60;
+  width: 30%;
+}
+.backBtn{
+  padding: 10px;
+}
+@media (max-width: 375px) {
+ }
+
+@media (max-width: 767px) {
+  .type{
+    font-size: 12px;
+  }
+  .value{
+    font-size: 12px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .overview{
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 1199px) {
+}
