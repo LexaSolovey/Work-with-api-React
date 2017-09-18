@@ -5,24 +5,17 @@ export default class CarInputs extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      movieName: '',
-    };
+    this.state = {};
     this.handleMovieNameChange = this.handleMovieNameChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.buttonClick = this.buttonClick.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
   }
 
-  buttonClick() {
-    this.props.setValue(this.state);
-  }
-
   handleMovieNameChange(event) {
-    this.setState({movieName: event.target.value})
+    this.props.setValue({movieName: event.target.value});
   }
 
   render() {
@@ -35,7 +28,6 @@ export default class CarInputs extends Component {
             value={this.state.movieName}
             onChange={this.handleMovieNameChange}
             required />
-          <input type="submit" value="Submit" onClick={this.buttonClick}/>
         </form>
       </div>
     );

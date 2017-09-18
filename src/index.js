@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, BrowserRouter, HashRouter} from 'react-router-dom';
+import {Route, HashRouter} from 'react-router-dom';
 import './components/Home/index.css';
-import Home from './components/Home/index';
+import Home from './components/Home';
 import Movie from './components/Movie/Movie';
 import registerServiceWorker from './registerServiceWorker';
 

@@ -26,7 +26,7 @@ export default class Movie extends Component {
     });
    }
 
-   componentWillMount(){
+   componentDidMount(){
      this.getMovieData();
    }
 
@@ -41,7 +41,7 @@ export default class Movie extends Component {
 
   render() {
     const movieData = this.state.movieData;
-    const imgSitePath = "https://image.tmdb.org/t/p/w500";
+    const imgSitePath = 'https://image.tmdb.org/t/p/w500';
 
     const descriptionValues =
       <Table responsive striped className="descriptionTable">
@@ -114,7 +114,7 @@ export default class Movie extends Component {
               <div className="backBtn">
                 <Row>
                   <Col md={2} sm={2} xs={2} mdOffset={5} smOffset={5} xsOffset={5}>
-                    <Link to='/'>
+                    <Link to="/">
                       <Button>Back</Button>
                     </Link>
                   </Col>

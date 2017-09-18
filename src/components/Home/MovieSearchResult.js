@@ -17,9 +17,6 @@ class MovieSearchResult extends Component {
          listOfMovies: listOfFindMovies.results
        })
      });
-     let titleListOfMovies = document.querySelector('.titleListOfMovies h3');
-     const titleContent = 'List of movies';
-     titleListOfMovies.innerHTML = titleContent;
    }
 
    getListOfTopMovies(){
@@ -32,26 +29,20 @@ class MovieSearchResult extends Component {
     }
 
    componentWillReceiveProps(nextProps) {
-     if(nextProps.movieName!==""){
-       this.getListOfMovies(nextProps.movieName);
-     }else {
-       this.getListOfTopMovies();
-       let titleListOfMovies = document.querySelector('.titleListOfMovies h3');
-       const titleContent = 'Top movies';
-       titleListOfMovies.innerHTML = titleContent;
-     }
+     nextProps.movieName!=='' ? this.getListOfMovies(nextProps.movieName) : this.getListOfTopMovies();
    }
 
-   componentWillMount(){
+   componentDidMount(){
      this.getListOfTopMovies();
    }
 
   render() {
     let content;
     const imgSitePath = "https://image.tmdb.org/t/p/w500";
+    const titleListOfMovies = this.props.movieName==='' ? 'Top movies' : 'List of movies';
     if(this.state.listOfMovies.length!==0){
-      let items = this.state.listOfMovies.map((item, index) =>
-        <div key={index} className="itemOfMovies">
+      let items = this.state.listOfMovies.map(item =>
+        <div key={item.id} className="itemOfMovies">
           <li>
             <Row>
               <Col md={3} sm={3}>
@@ -73,7 +64,7 @@ class MovieSearchResult extends Component {
           <Row>
             <Col md={12} sm={12}>
               <div className="titleListOfMovies">
-                <h3>Top movies</h3>
+                <h3>{titleListOfMovies}</h3>
               </div>
             </Col>
           </Row>
